@@ -221,10 +221,8 @@ fetchData();
 
 	}
 	function Subtract() {
-		 i = document.getElementById('qty-box').stepDown();
-		 if (i <= 0){
-		 	document.getElementById('btnminus').disabled = true;
-		 }
+		document.getElementById('qty-box').stepDown();
+	
 	}
 	function Add1(){
 		document.getElementById('qty-box1').stepUp();
