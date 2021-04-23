@@ -2,11 +2,12 @@
 -Compilation
 
 The project needs no compilation i used plain CSS, JS and HTML, all there is to do is esure  files on your local directory
-files include
--VaimoAssessment.html
+files include:
+
+VaimoAssessment.html
 main.css
--mobile.css
--images(folder)
+mobile.css
+images(folder)
 
 -OverView
 
