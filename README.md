@@ -3,7 +3,7 @@
 
 The project needs no compilation i used plain CSS, JS and HTML, all there is to do is esure  files on your local directory
 files include:
-VaimoAssessment.html<br />
+vaimoAssessment.html<br />
 main.css<br />
 mobile.css<br />
 images(folder)<br />
