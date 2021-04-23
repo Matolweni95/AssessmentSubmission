@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- XML file for the shape (saved in res/drawable) -->
+	<?xml version="1.0" encoding="utf-8"?>
+	<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android" android:width="360dp" android:height="360dp"/>
+	
+	
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="mobile.css">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+</head>
+<body>
+	<div id = "injection"></div>
+
+</body>
+<script>
+function fetchData() {
+	fetch('https://fe-assignment.vaimo.net/')
+		.then(response => {
+			if(!response.ok){
+				throw Error("Error");
+			}
+			return response.json();
+			console.log(response);
+
+		}).then(data => {
+			console.log(data);
+
+			var price1080p = `${data.product.options['1080p'].price.value.toFixed(2)}`;
+			var price4k = `${data.product.options['4k'].price.value.toFixed(2)}`;
+			var priceBattery= `${data.product.options.battery_accessories.price.value.toFixed(2)}`;
+			var price = 0;
+
+
+			var out = document.getElementById('injection');
+			out.innerHTML = `<div class = "flex-container">
+								<section id = "heroImg">
+									<img class = "image" src = " ${data.product.gallery['0'].main}">
+								</section>
+
+								<section class = "prodDescription">
+								<p class="ship-icons">
+								<span class = "ready-to-ship ship-text">
+									Ready to Ship
+								</span>
+
+								<span class = "in-stock stock-text">
+									<span class ="ok-img"> <img class = "ok" src="./images/icons8-ok.png" alt = "ok-icon"><span>
+									In Stock
+								</span>
+
+								<span class = "dispatch dispatch-text">
+									<span class ="ok-img"> <img class = "ok" src="./images/icons8-ok.png" alt = "ok-icon"><span>
+									Fast dispatch
+								</span>
+
+								</p>
+									<p class = "hot-selling-gps">${data.product.name} <span class = "label-background hot-label">${data.product.tags['0']}</span></p>
+										<div class = "rating">
+										<p class = "rate">
+											<img class = "star" src = "./images/icons8-star_filled.png" alt = "star">
+											<img class = "star" src = "./images/icons8-star_filled.png" alt = "star">
+											<img class = "star" src = "./images/icons8-star_filled.png" alt = "star">
+											<img class = "star" src = "./images/icons8-star_filled.png" alt = "star">
+											<img class = "star" src = "./images/icons8-star_filled.png" alt = "star">
+											<span class= "star">${data.product.reviews.rating}</span> <span class = "reviews">${data.product.reviews.count} Reviews</span><span class = "buyers">${data.product.reviews.total_buyers} Buyers</span></p>
+										</div>
+										<hr class = "line">
+										<div class = "pricing">
+											<p>${data.product.options.battery_accessories.price.currency.symbol}${data.product.options.battery_accessories.price.value} - ${data.product.options.battery_accessories.price.currency.symbol} ${data.product.options['4k'].price.value} <span class = "optionlabel">/Option</span> <span class = "options">2 Options</span> <span class = "min-order">(Min.Order)</span>
+											</p>
+
+											<p class = "old_price"><strike>
+												${data.product.options.battery_accessories.price.currency.symbol}${data.product.options.battery_accessories.old_price.value} - ${data.product.options.battery_accessories.price.currency.symbol} ${data.product.options['4k'].old_price.value}
+												</strike>
+											</p>
+										<hr class = "line2">
+										</div>
+										<div class = "banner bannerbackground">
+											<p>
+												<img class = "logo" src = "./images/Logo.png" alt = "banner-image"> 
+													<span class="free-shipping-up"> •  Free shipping (up to $40)
+													</span>
+													 <span class = "on-time-delivery-g"> •  On-time delivery guaranteed
+													 </span>
+													 <img class ="forward" src ="./images/icons8-forward.png" alt = "forward-arrow">
+											</p>
+										</div>
+
+										<div class = "discount">
+											<p><span class = "discountPer">${data.product.discount.amount} OFF</span> <span class = "discount-ends-in">Discount ends in</span><img class = "timer" src = "./images/icons8-clock.png" alt = "clock-icon"> <span class = "countdown"> ${data.product.discount.end_date}</span>
+
+											</p>
+										<div>
+
+										<div class = "cart-options">
+
+											<p class = "option1"><span class = "temp-col">Options:</span> <span class = "temp-col-1 product">${data.product.options['1080p'].label}</span> 
+											<span class ="temp-col-2 r-990-00">${data.product.options['1080p'].price.currency.symbol}${data.product.options['1080p'].price.value}</span>
+												<span class = "temp-QTY">
+													<button id = "btnminus" class = "btn-minus-background2" onclick="Subtract()"></button>
+													<input id = "qty-box" type = "number" class ="display2" value = "0" min = "0">
+													<button id = "add" class = "btn-plus-background2"onclick="Add()"></button>
+												</span>
+											</p>
+
+											<p class = "option1"><span class = "col-1 product">${data.product.options['4k'].label}</span> 
+											<span class ="col-2 r-990-00">${data.product.options['4k'].price.currency.symbol}${data.product.options['4k'].price.value}</span>
+												<span class = "QTY">
+													<button class = "btn-minus-background" onclick="Subtract1()"></button>
+													<input id = "qty-box1" type ="number" class = "display"  value = "0" min = "0">
+													<button class = "btn-plus-background" onclick="Add1()"></button>
+
+												</span>
+											</p>  
+											<p class = "option1"><span class = "col-1 product">${data.product.options.battery_accessories.label}</span> 
+											<span class ="qty-col-2 r-990-00">${data.product.options.battery_accessories.price.currency.symbol}${data.product.options.battery_accessories.price.value.toFixed(2)}</span>
+												<span class = "qty-QTY">
+													<button class = "btn-minus-background" onclick="Subtract2()"></button>
+													<input id = "qty-box2" type	="number" class = "display"  value = "0" min = "0">
+													<button class = "btn-plus-background" onclick="Add2()"></button>
+												</span>
+											</p>
+
+
+										</div>
+
+										<div class = "footer">
+										<p class = "foot-head">
+											<img class = "safe" src = "./images/icon.svg" alt = "sheild-icon">
+												<span class = "trade-assurance ">
+													Trade Assurance
+												</span>
+												<span class = "protects-your-alibab">
+													 protects your Alibaba.com orders
+												</span>
+										</p>
+										<p class = "payment-options">
+										<span class = "payments">
+											Payments: 
+										</span>
+											<img class = "visa-pay" src = "./images/icons8-visa.svg" alt ="visa-icon">
+											<img class = "mastercard-pay" src = "./images/icons8-mastercard.svg" alt = "mastercard-icon">
+											<img class = "apple-pay" src = "./images/icons8-apple_pay.svg" alt = "applepay-icon">
+
+										</p>
+
+										<p>
+										<span class = "alibaba-com-logistic">
+											Alibaba.com Logistics        
+										</span>
+										<span class = "inspection-solutions">
+											Inspection Solutions
+										</span>
+										</p>
+
+										</div>
+
+										</div> 
+
+										</div>
+								</section>
+								<section class = "total">
+									<div class = "box-element">
+										<p>
+											<span class = "ship-to-south-africa">
+												Ship to ${data.product.shipping.method.country} by ${data.product.shipping.method.title}  
+
+											</span>
+										
+
+										</p>
+
+											<p>
+											<span class = "lead-time-10-days">
+												Lead Time <span class = "tooltip">${data.product.shipping.lead_time.value} 
+												<span class = "tooltiptext"> ${data.product.shipping.lead_time.info}</span></span>
+											</span>
+											<img class = "info-img" src = "./images/icons8-info.png" alt = "info">
+
+										</p>
+											<p>
+											<span class = "shipping-time-6-10-d">
+												Shipping time <span class = "tooltip"> ${data.product.shipping.method.shipping_time.value}days
+												<span class = "tooltiptext2">${data.product.shipping.method.shipping_time.info}</span></span>
+											</span>
+											<img class = "info-img" src = "./images/icons8-info.png" alt = "info">
+										</p>
+
+										<button class = "login-label"><span class = "login-text">Login to Purchase</span></button>
+										<button class = "contact-label">
+										<span class = "contact-text">
+											<span class ="envelope" ><img src ="./images/icons8-envelope.png"></span> Contact the Supplier
+										</span>
+										</button>
+
+									</div>
+												
+								</section>
+
+
+								</div>`
+
+
+		}).catch(error => {
+			console.log(error)
+		});
+}
+fetchData();
+
+</script>
+
+<script>
+	var i = 0;
+	function Add(){
+		document.getElementById('qty-box').stepUp();
+
+	}
+	function Subtract() {
+		 i = document.getElementById('qty-box').stepDown();
+		 if (i <= 0){
+		 	document.getElementById('btnminus').disabled = true;
+		 }
+	}
+	function Add1(){
+		document.getElementById('qty-box1').stepUp();
+	}
+	function Subtract1() {
+		 document.getElementById('qty-box1').stepDown();
+	}
+	function Add2(){
+		document.getElementById('qty-box2').stepUp();
+	}
+	function Subtract2() {
+		 document.getElementById('qty-box2').stepDown();
+	}
+
+
+</script>
+
+</html>

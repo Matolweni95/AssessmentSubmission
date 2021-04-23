@@ -1,0 +1,884 @@
+body 
+	{
+		margin: 0px;
+		background-color: #FFFFFF;
+
+	}
+
+	h1 {
+		align-self: flex-end;
+	}
+
+	p{
+		margin: 0px;
+	}
+
+  input { 
+    color: #999999;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 16px;
+    width: 80px;
+    text-align: center; 
+}
+
+	.flex-container
+	{
+		display: flex;
+		flex-direction: row;
+	}
+
+	.image 
+	{
+		margin: 48px 24px 560px 72px;
+  		width: 416px;
+  		height: 416px;
+
+  	}
+
+
+  	.prodDescription
+  	{
+  		margin-top: 48px;
+  		width: 526px;
+  		max-height: 544px;
+  	}
+
+    .ok{
+
+      width:12px;
+      height:12px;
+      padding-left:8px;
+      position: relative;
+      top: 2px;
+    }
+
+  	.ready-to-ship
+  	{
+  		background-image: linear-gradient(270deg, #F5515F 0%, #FF7527 100%);
+  		border-radius: 2px 0 0 2px;
+  		width: 90px;
+  		height: 20px;
+
+  	}
+
+  	.in-stock
+  	{
+  		background-color: #FFF0E6;
+  		width: 75px;
+  		height: 20px;
+
+  	}
+
+  	.dispatch
+  	{
+  		background-color: #FFF0E6;
+  		width: 75px;
+  		height: 20px;
+  	}
+
+	.ship-text
+	{
+		color: #FFFFFF;
+  		font-family: Roboto;
+  		font-size: 12px;
+  		line-height: 16px;
+  		text-align: left;
+      padding: 2px 8px 2px 8px;
+
+	}
+
+	.stock-text
+	{
+		color: #FF6600;
+  		font-family: Roboto;
+  		font-size: 12px;
+  		line-height: 16px;
+  		text-align: left;
+      padding: 2px 8px 2px 4px;
+	}
+
+	.dispatch-text
+	{
+		color: #FF6600;
+  		font-family: Roboto;
+  		font-size: 12px;
+  		line-height: 16px;
+  		text-align: left;
+      
+	}
+
+  	.hot-selling-gps 
+  	{
+  		color: #333333;
+  		font-family: Roboto;
+  		font-size: 16px;
+ 	 	  line-height: 24px;
+  		width: 500px;
+  		text-align: left;
+  		padding-top: 8px;
+  		margin-bottom: 12px;
+	
+	}
+
+	.hot-label 
+	{
+  		color: #999999;
+  		font-family: Roboto;
+  		font-size: 12px;
+  		line-height: 16px;
+  		text-align: left;
+	}
+
+	.label-background
+	{
+  		background-color: #EDF0F3;
+  		border-radius: 2px;
+  		width: 111px;
+  		height: 20px;
+	}
+
+	.rating{
+		margin-bottom: 12px;	
+		
+	}
+	
+
+	.star
+	{
+		width: 14px;
+		height: 14px;
+	}
+
+	.line{
+    color: #E6E7EB;
+		position: relative;	
+		
+	}
+
+  .line2{
+    color: #E6E7EB;
+
+  }
+
+	.rate
+	{
+		color: #FF6600;
+  		font-family: Roboto;
+  		font-size: 12px;
+  		line-height: 16px;
+  		text-align: left;
+		position: relative;
+		
+	}
+
+	.reviews 
+	{
+		color: #999999;
+	  	font-family: Roboto;
+  		font-size: 12px;
+  		line-height: 16px;
+  		text-align: left;
+  		margin-left: 3px;
+	}
+
+	.buyers {
+  		color: #333333;
+  		font-family: Roboto;
+  		font-size: 12px;
+  		line-height: 16px;
+  		text-align: left;
+  		margin-left: 15px;
+	}
+
+	.pricing
+	{
+		margin-top: 12px;
+		color: #FF6600;
+  		font-family: Roboto;
+  		font-size: 16px;
+  		text-align: left;
+  		line-height: 24px;
+  		position: relative;	
+  		
+	}
+
+	.optionlabel 
+	{
+		color: #999999;
+  		font-family: Roboto;
+  		font-size: 14px;
+  		line-height: 16px;
+  		text-align: left;
+  		margin-left: 12px;
+	}
+
+	.options
+	{
+		color: #333333;
+  		font-family: Roboto;
+  		font-size: 14px;
+  		line-height: 16px;
+  		text-align: left;
+  		margin-left: 11px;
+	}
+
+	.min-order
+	{
+		color: #999999;
+  		font-family: Roboto;
+  		font-size: 14px;
+  		line-height: 16px;
+  		text-align: left;
+	}
+
+	.old_price 
+	{
+		color: #999999;
+  		font-family: Roboto;
+  		font-size: 14px;
+  		line-height: 16px;
+  		text-align: left;
+  		margin-bottom: 12px;
+	}
+
+	.banner
+	{
+		margin-top: 12px;
+	}
+
+	.logo 
+	{
+  		width: 76px;
+  		height: 40px;
+	}
+
+	.bannerbackground 
+	{
+  		background: #FFF0E6;
+  		width: 526px;
+  		height: 40px;
+	}
+
+	.free-shipping-up 
+	{
+  		color: #FF6600;
+  		font-family: Roboto;
+  		font-size: 14px;
+  		line-height: 16px;
+  		text-align: left;
+  		position: relative;	
+  		bottom: 13px;
+  		margin-left: 24px;
+	}
+
+	.on-time-delivery-g 
+	{
+  		color: #FF6600;
+  		font-family: Roboto;
+  		font-size: 14px;
+  		line-height: 16px;
+  		text-align: left;
+  		position: relative;	
+  		bottom: 13px;
+  		margin-left: 24px;
+	}
+
+	.forward
+	{
+		width: 8px;
+		height: 14px;
+		position: relative;	
+  		bottom: 12px;
+  		margin-left: 49px;
+	}
+
+	.timer
+	{
+		margin-left: 24px;
+		width: 16px;
+		height: 16px;
+	}
+
+	.discount
+	{
+		margin-top: 28px;
+		
+	}
+
+	.discountPer
+	{
+		color: #FF6600;
+  		font-family: Roboto;
+  		font-size: 14px;
+  		line-height: 16px;
+  		text-align: left;
+	}
+
+	.discount-ends-in 
+	{
+  		color: #999999;
+  		font-family: Roboto;
+  		font-size: 14px;
+  		line-height: 16px;
+  		text-align: left;
+	}
+
+	.countdown
+	{
+  		color: #999999;
+  		font-family: Roboto;
+  		font-size: 16px;
+  		line-height: 24px;
+  		text-align: left;
+  		margin-left: 12px;
+	}
+
+	.cart-options
+	{
+		  margin-top: 24px;
+	}
+
+  .product {
+    color: #333333;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 16px;
+    width: 174px;
+    text-align: left;
+}
+
+	.temp-col
+	{
+		  position: relative;	
+		  bottom: 12px;
+		  color: #999999;
+  		font-family: Roboto;
+  		font-size: 14px;
+  		line-height: 16px;
+  		width: 112px;
+  		text-align: left;
+	}
+	.temp-col-1 
+	{
+		margin-left: 62px;
+		position: relative;	
+		bottom: 12px;
+
+	}
+
+	.temp-col-2 
+	{
+		margin-left: 118px;
+		position: relative;	
+		bottom: 12px;
+	}
+
+	.temp-QTY
+	{
+			margin-left: 16px;
+		
+	}
+
+  input[type=number]::-webkit-inner-spin-button, 
+	input[type=number]::-webkit-outer-spin-button { 
+  		-webkit-appearance: none; 
+  		
+	}
+
+  input[type=number] {
+    -moz-appearance: textfield;
+    text-align: center;
+
+  }
+
+  .r-990-00 {
+  color: #333333;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+}
+
+	.col-1 
+	{
+		margin-left: 112px;
+		position: relative;	
+		bottom: 12px;
+
+	}
+
+	.col-2 
+	{
+		margin-left: 137px;
+		position: relative;	
+		bottom: 12px;
+	}
+
+	.QTY
+	{
+		margin-left: 23px;
+	}
+
+	.qty-col-2
+
+	{
+		margin-left: 7.7px;
+		position: relative;	
+		bottom: 12px;
+		margin-left: 33px;
+	}
+	.qty-QTY
+	{
+		margin-left: 30px;
+	}
+
+	.option1
+	{
+	
+		margin-bottom: 12px;
+		height: 40px;
+		
+	}
+
+	.minus 
+	{
+		width: 14px;
+		height: 2px;
+	}
+
+	.plus
+	{
+		width: 14px;
+		height: 2px;
+	}
+
+	.btn-minus-background
+	{
+  		background-color: #FFFFFF;
+  		border: 1px solid #E6E7EB;
+  		border-radius: 2px 0 0 2px;
+  		width: 40px;
+  		height: 40px;
+  		background-image: url(./images/icons8-minus.png);
+  		background-repeat: no-repeat;
+  		background-position: center;
+  		position: relative;	
+  		left: 19px;
+  	}
+  	.btn-minus-background2
+	{
+  		background-color: #FFFFFF;
+  		border: 1px solid #E6E7EB;
+  		border-radius: 2px 0 0 2px;
+  		width: 40px;
+  		height: 40px;
+  		background-image: url(./images/icons8-minus.png);
+  		background-repeat: no-repeat;
+  		background-position: center;
+  		position: relative;	
+  		left: 23px;
+  	}
+
+  	.btn-plus-background
+	{
+  		background-color: #FFFFFF;
+  		border: 1px solid #FF6600;
+  		border-radius: 2px 0 0 2px;
+  		width: 40px;
+  		height: 40px;
+  		background-image: url(./images/icons8-plus_math.png);
+  		background-repeat: no-repeat;
+  		background-position: center;
+  		position: relative;
+  		margin-left: 6.8px;
+  	
+  	}
+
+  		.btn-plus-background2
+	{
+  		background-color: #FFFFFF;
+  		border: 1px solid #FF6600;
+  		border-radius: 2px 0 0 2px;
+  		width: 40px;
+  		height: 40px;
+  		background-image: url(./images/icons8-plus_math.png);
+  		background-repeat: no-repeat;
+  		background-position: center;
+  		position: relative;
+  		margin-left:12px;
+  		
+  	}
+
+	.display
+	{
+		background-color: #FFFFFF;
+		border: 1px solid #E6E7EB;
+    width: 80px;
+  	height: 36px;
+    position: relative;
+    bottom: 14px;
+    left: 13px;
+	}
+	.display2
+	{
+		background-color: #FFFFFF;
+		border: 1px solid #E6E7EB;
+  	width: 80px;
+  	height: 36px;
+    position: relative;
+    bottom: 14px;
+    left: 18px;
+	}
+
+
+	.footer
+	{
+		margin-top: 24px;
+	}
+
+	.foot-head
+	{
+		margin-bottom: 12px;
+	}
+
+	.safe
+	{
+		width: 12px;
+		height: 14px;
+	}
+
+	.trade-assurance 
+
+	{
+  	color: #999999;
+  	font-family: Roboto;
+  	font-size: 14px;
+  	line-height: 16px;
+  	text-align: left;
+
+	}
+
+	.protects-your-alibab 
+	{
+  	color: #999999;
+  	font-family: Roboto;
+  	font-size: 12px;
+  	line-height: 16px;
+  	text-align: left;
+	}
+
+	.payment-options
+	{
+		margin-bottom: 12px;
+	}
+
+	.payments 
+	{
+  	color: #999999;
+  	font-family: Roboto;
+  	font-size: 12px;
+  	line-height: 16px;
+  	text-align: left;
+
+	}
+
+	.visa-pay
+	{
+		width: 17px;
+		height: 12px;
+		
+	}
+
+	.mastercard-pay
+	{
+		width: 17px;
+		height: 12px;
+	}
+
+  	.apple-pay
+  	{
+  		width: 28px;
+  		height: 12px;
+  	}
+
+  	.alibaba-com-logistic {
+  		color: #999999;
+  		font-family: Roboto;
+  		font-size: 12px;
+  		line-height: 16px;
+  		text-align: left;
+	}
+
+	.inspection-solutions 
+	{
+  		color: #999999;
+  		font-family: Roboto;
+  		font-size: 12px;
+  		line-height: 16px;
+  		text-align: left;
+	}
+
+	.total 
+	{
+		  margin-left: 24px;
+		  margin-top: 48px;
+		  margin-right: 72px;
+		
+	}
+
+  	.box-element
+  	{
+  		background-color: #FFFFFF;
+  		border-radius: 8px;
+  		box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
+  		width: 306px;
+  		height: 256px;
+
+
+  	}
+
+  	.ship-to-south-africa 
+  	{
+  		color: #999999;
+  		font-family: Roboto;
+  		font-size: 14px;
+  		line-height: 16px;
+  		width: 134px;
+  		height: 32px;
+  		margin: 0px 48px 12px 24px;
+  		display: -webkit-box;
+  		-webkit-box-orient:vertical;
+  		-webkit-line-clamp:2;	
+  		text-overflow: ellipsis;
+  		overflow: hidden;
+  		padding-top: 24px;
+	}
+
+	.lead-time-10-days 
+	{
+  		color: #999999;
+  		font-family: Roboto;
+  		font-size: 14px;
+  		line-height: 16px;
+  		text-align: left;
+  		margin-left: 24px;
+  		margin-bottom: 12px;
+  		display: inline-block;
+	}
+
+	.shipping-time-6-10-d 
+	{
+  		color: #999999;
+  		font-family: Roboto;
+  		font-size: 14px;
+  		line-height: 16px;
+  		text-align: left;
+  		display: inline-block;
+  		margin-left: 24px;
+  		margin-bottom: 12px;
+	}	
+
+  	.info-img 
+  	{
+  		width: 14px;
+  		height: 14px;
+  	}
+
+  	.login-label 
+  	{
+  		background-color: #FF6600;
+  		border-radius: 20px;
+  		border: 1px;
+  		width: 258px;
+  		height: 40px;
+  		margin-left: 24px;
+  		display: inline-block;
+	}
+
+	.login-text
+	{
+		color: #FFFFFF;
+  	font-family: Roboto;
+  	font-size: 14px;
+  	line-height: 20px;
+ 		width: 210px;
+  	text-align: center;
+
+	}
+
+	.contact-label
+	{
+  	background-color: rgba(255, 255, 255, 0);
+  	border: 1px solid #FF6600;
+  	border-radius: 20px;
+  	width: 258px;
+  	height: 40px;
+  	display: inline-block;
+  	margin-left: 24px;
+  	margin-top: 12px;
+	}
+
+	.envelope
+	{
+		width: 14px;
+		height: 12px;
+		display: inline-block;	
+
+	}
+
+	.contact-text
+	{
+  	color: #FF6600;
+  	font-family: Roboto;
+  	font-size: 14px;
+  	line-height: 20px;
+  	text-align: center;
+	}
+
+  @-moz-document url-prefix() {
+  .btn-minus-background2 {
+    background-color: #FFFFFF;
+      border: 1px solid #E6E7EB;
+      border-radius: 2px 0 0 2px;
+      width: 40px;
+      height: 40px;
+      background-image: url(./images/icons8-minus.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative; 
+      left: 23px;
+      bottom: 19px;
+  }
+}
+
+  @-moz-document url-prefix() {
+  .btn-plus-background2 {
+    background-color: #FFFFFF;
+      border: 1px solid #FF6600;
+      border-radius: 2px 0 0 2px;
+      width: 40px;
+      height: 40px;
+      background-image: url(./images/icons8-plus_math.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      margin-left:14px;
+      bottom: 19px;
+  }
+}
+
+  @-moz-document url-prefix() {
+  .btn-minus-background {
+    background-color: #FFFFFF;
+      border: 1px solid #E6E7EB;
+      border-radius: 2px 0 0 2px;
+      width: 40px;
+      height: 40px;
+      background-image: url(./images/icons8-minus.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative; 
+      left: 21px;
+      bottom: 19px;
+  }
+}
+
+  @-moz-document url-prefix() {
+  .btn-plus-background {
+    background-color: #FFFFFF;
+      border: 1px solid #FF6600;
+      border-radius: 2px 0 0 2px;
+      width: 40px;
+      height: 40px;
+      background-image: url(./images/icons8-plus_math.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      margin-left:12px;
+      bottom: 19px;
+  }
+}
+
+@-moz-document url-prefix() {
+  .QTY {
+      position: relative;
+      margin-left:19px;
+      
+  }
+}
+@-moz-document url-prefix() {
+.display {
+    background-color: #FFFFFF;
+    border: 1px solid #E6E7EB;
+    width: 80px;
+    height: 36px;
+    position: relative;
+    bottom: 15px;
+    left: 16px;
+}
+}
+@-moz-document url-prefix() {
+.display2 {
+    background-color: #FFFFFF;
+    border: 1px solid #E6E7EB;
+    width: 80px;
+    height: 36px;
+    position: relative;
+    bottom: 15px;
+    left: 18px;
+}
+}
+
+@-moz-document url-prefix() {
+  .qty-QTY {
+    margin-left: 27px;
+}
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+   font-family: Roboto;
+  font-size: 14px;
+  background-color: #FF6600;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom:  -9px; 
+  left: 200%;
+}
+.tooltip .tooltiptext2 {
+  visibility: hidden;
+  width: 120px;
+   font-family: Roboto;
+  font-size: 14px;
+  background-color: #FF6600;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  width:  280px;
+  left: -130%;
+  top: 160px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip:hover .tooltiptext2 {
+  visibility: visible;
+}
